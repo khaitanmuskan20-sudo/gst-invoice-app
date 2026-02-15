@@ -2,3 +2,4 @@ Flask
 gunicorn
 fpdf
 num2words
+reportlab
