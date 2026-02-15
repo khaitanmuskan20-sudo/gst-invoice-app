@@ -22,6 +22,7 @@ def amount_in_words(amount):
 
 # ---------------- DB ----------------
 def get_db():
+    db_path = os.path.join(os.getcwd(), "invoice.db")
     conn = sqlite3.connect("invoice.db")
     conn.row_factory = sqlite3.Row   # ✅ CRITICAL FIX
     return conn
@@ -405,6 +406,7 @@ def pdf(id):
 # ---------------- RUN ----------------
 if __name__ == "__main__":   # ✅ REQUIRED
     app.run(debug=True)
+
 
 
 
